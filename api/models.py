@@ -13,3 +13,8 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.CharField(max_length=250)
     is_active = models.BooleanField(default=True)
+
+class OrderDetail(models.Model):
+    date = models.DateTimeField(auto_now_add=True)
+    total = models.DecimalField(max_digits=10, decimal_places=2)
+    is_active = models.BooleanField(default=True)
