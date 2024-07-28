@@ -16,11 +16,11 @@ COPY . /app/
 # Exponer el puerto que usará la aplicación
 EXPOSE 8000
 
-# Usar una imagen base oficial de Nginx
-FROM nginx:latest
+# # Usar una imagen base oficial de Nginx
+# FROM nginx:latest
 
-# Copiar la configuración de Nginx al contenedor
-COPY nginx.conf /etc/nginx/nginx.conf
+# # Copiar la configuración de Nginx al contenedor
+# COPY nginx.conf /etc/nginx/nginx.conf
 
 # Comando para correr la aplicación
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
