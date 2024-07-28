@@ -6,3 +6,10 @@ http://127.0.0.1:8000/api/v1/persons
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py makemigrations
+
+docker build -t mydjangoapp .
+docker run -p 8000:8000 mydjangoapp
+docker system prune -a
+
+docker run -it mydjangoapp bash
+python manage.py migrate
